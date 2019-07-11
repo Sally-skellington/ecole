@@ -7,20 +7,26 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
-@Table(name = "TEACHING_DOCUMENT")
+@Table(name = "teaching_document")
 public class TeachingDocumentEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	@Column(name = "ID")
 	private Integer id;
 
+	@Column(name="typeDoc")
 	private String typeDoc;
 
+	@Column(name="nombre")
 	private int nombre;
 
+	@Column(name="titre")
 	private String titre;
 
+	@Column(name="domaine")
 	private String domaine;
 
 	public Integer getId() {
